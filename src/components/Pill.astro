@@ -1,30 +1,30 @@
 ---
-import { Sizes, Colors } from '../tokens/core';
+import { Sizes, Colors } from "../tokens/core";
 interface Props {
-	size?: keyof typeof Sizes;
-	color?: string;
-};
+  size?: keyof typeof Sizes;
+  color?: string;
+}
 
-const { size = 'base', color } = Astro.props;
+const { size = "base", color } = Astro.props;
 
 const fontSize = Sizes[size].textSize;
-const backgroundColor = color ?? Colors.primary; 
-
+const backgroundColor = color ?? Colors.primary;
 ---
+
 <div class="pill"><slot /></div>
 
 <style define:vars={{ fontSize, backgroundColor }}>
-	.pill {
-		display: flex;
-		padding: 0.5rem 1rem;
-		gap: 0.5rem;
-		color: var(--accent-text-over);
-		border: 1px solid var(--backgroundColor);
-		background-color: var(--backgroundColor);
-		border-radius: 999rem;
-		font-size: var(--fontSize);
-		line-height: 1.35;
-		white-space: nowrap;
-		align-items: center;
-	}
+  .pill {
+    display: flex;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    color: var(--accent-text-over);
+    border: 1px solid var(--backgroundColor);
+    background-color: var(--backgroundColor);
+    border-radius: 999rem;
+    font-size: var(--fontSize);
+    line-height: 1.35;
+    white-space: nowrap;
+    align-items: center;
+  }
 </style>

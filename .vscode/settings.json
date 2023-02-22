@@ -1,5 +1,8 @@
 {
-    "cSpell.enableFiletypes": [
-        "astro"
-    ]
+  "cSpell.enableFiletypes": ["astro"],
+  "editor.formatOnSave": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
 }
