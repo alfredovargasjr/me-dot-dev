@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: me-do-dev-deployment
+      name: non-prod
       url: ${{ steps.netlify-deploy.outputs.NETLIFY_URL }}
 
     strategy:
@@ -36,6 +36,37 @@ jobs:
       uses: netlify/actions/cli@master
       with:
         args: deploy --dir=dist
+      env:
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: prod
+      url: ${{ steps.netlify-deploy.outputs.NETLIFY_LIVE_URL }}
+
+    strategy:
+      matrix:
+        node-version: [17.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - name: Deploy To Netlify
+      id: netlify-deploy
+      uses: netlify/actions/cli@master
+      with:
+        args: deploy --dir=dist --prod
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
