@@ -15,6 +15,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
+import Button from '../components/Button.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -35,14 +36,16 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" />Web Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="terminal" />Innovative</Pill>
+						<Pill><Icon icon="tips_and_updates" />Curious</Pill>
+						<Pill><Icon icon="volunteer_activism" />Supportive</Pill>
+					</div>
+					<div>
+						<Button variant="ghost" href="/Alfredo_Vargas_Resume.pdf"><Icon icon="rocket_launch"/>View resume</Button>
 					</div>
 				</Hero>
-
 				<img
-					alt="Portriat of Alfredo."
+					alt="Portrait"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -51,6 +54,7 @@ const projects = (await getCollection('work'))
 			<Skills />
 		</div>
 		<!-- <ContactCTA /> -->
+		<div />
 	</div>
 </BaseLayout>
 

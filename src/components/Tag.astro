@@ -1,0 +1,32 @@
+---
+import Pill from "./Pill.astro";
+
+export const TagCategory = {
+    "language": {
+        "color": "#9DD2A8"
+    },
+    "library": {
+        "color": "#69B1E0"
+    },
+    "framework": {
+        "color": "#ffac81"
+    },
+    "database": {
+        "color": "#ff70a6"
+    },
+    "other": {
+        "color": "#ff928b"
+    }
+}
+
+interface Props {
+    tagCategory?: keyof typeof TagCategory;
+};
+
+const { tagCategory = "other" } = Astro.props;
+
+const category = TagCategory[tagCategory];
+
+---
+
+<Pill size="sm" color={category.color}><slot/></Pill>

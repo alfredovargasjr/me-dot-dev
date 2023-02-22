@@ -1,0 +1,14 @@
+{
+    "sm": {
+        "textSize": "0.875rem"
+    },
+    "base": {
+        "textSize": "1rem"
+    },
+    "md": {
+        "textSize": "1.125rem"
+    },
+    "lg": {
+        "textSize": "1.25rem"
+    }
+}
