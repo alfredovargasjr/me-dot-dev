@@ -44,6 +44,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: static-site
+          path: dist
       - name: Deploy To Netlify
         id: netlify-deploy
         uses: netlify/actions/cli@master
@@ -62,6 +63,11 @@ jobs:
       url: ${{ steps.netlify-deploy.outputs.NETLIFY_LIVE_URL }}
 
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: static-site
+          path: dist
       - name: Deploy To Netlify
         id: netlify-deploy
         uses: netlify/actions/cli@master
