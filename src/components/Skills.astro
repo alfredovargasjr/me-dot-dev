@@ -1,94 +1,102 @@
 ---
-import Icon from './Icon.astro';
-import Tag from './Tag.astro';
-
+import Icon from "./Icon.astro";
+import Tag from "./Tag.astro";
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="code" />
-		<h2>Web</h2>
-		<p>Expertise in developing and collaborating with designers, user researchers, and product to build awesome user experiences.</p>
-		<div class="tags">
-			<Tag tagCategory="language">Javascript</Tag>
-			<Tag tagCategory="library" >React</Tag>
-			<Tag tagCategory="language">Typescript</Tag>
-			<Tag tagCategory="other">Webpack</Tag>
-		</div>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="database" />
-		<h2>Data</h2>
-		<p>Experience in building scalable and data intensive services to serve data, analytics, and insights.</p>
-		<div class="tags">
-			<Tag tagCategory="other">BigData</Tag>
-			<Tag tagCategory="database">Elasticsearch</Tag>
-			<Tag tagCategory="framework">Hadoop</Tag>
-			<Tag tagCategory="language">Java</Tag>
-			<Tag tagCategory="language">Kotlin</Tag>
-			<Tag tagCategory="database">Postgres</Tag>
-			<Tag tagCategory="database">Redis</Tag>
-			<Tag tagCategory="other">RESTful</Tag>
-			<Tag tagCategory="framework">SpringBoot</Tag>
-		</div>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="settings" />
-		<h2>DevOps</h2>
-		<p>Knowledge in upgrading the developer experience by configuring pipelines to support continuos integration and delivery (CI/CD).</p>
-		<div class="tags">
-			<Tag tagCategory="other">AWS</Tag>
-			<Tag tagCategory="other">Docker</Tag>
-			<Tag tagCategory="other">Identity and Access Management (IAM)</Tag>
-			<Tag tagCategory="other">Kubernetes</Tag>
-		</div>
-	</div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="code" />
+    <h2>Web</h2>
+    <p>
+      Expertise in developing and collaborating with designers, user
+      researchers, and product to build awesome user experiences.
+    </p>
+    <div class="tags">
+      <Tag tagCategory="language">Javascript</Tag>
+      <Tag tagCategory="library">React</Tag>
+      <Tag tagCategory="language">Typescript</Tag>
+      <Tag tagCategory="other">Webpack</Tag>
+    </div>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="database" />
+    <h2>Data</h2>
+    <p>
+      Experience in building scalable and data intensive services to serve data,
+      analytics, and insights.
+    </p>
+    <div class="tags">
+      <Tag tagCategory="other">BigData</Tag>
+      <Tag tagCategory="database">Elasticsearch</Tag>
+      <Tag tagCategory="framework">Hadoop</Tag>
+      <Tag tagCategory="language">Java</Tag>
+      <Tag tagCategory="language">Kotlin</Tag>
+      <Tag tagCategory="database">Postgres</Tag>
+      <Tag tagCategory="database">Redis</Tag>
+      <Tag tagCategory="other">RESTful</Tag>
+      <Tag tagCategory="framework">SpringBoot</Tag>
+    </div>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="settings" />
+    <h2>DevOps</h2>
+    <p>
+      Knowledge in upgrading the developer experience by configuring pipelines
+      to support continuos integration and delivery (CI/CD).
+    </p>
+    <div class="tags">
+      <Tag tagCategory="other">AWS</Tag>
+      <Tag tagCategory="other">Docker</Tag>
+      <Tag tagCategory="other">Identity and Access Management (IAM)</Tag>
+      <Tag tagCategory="other">Kubernetes</Tag>
+    </div>
+  </div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+  .box {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+  .skills h2 {
+    font-size: var(--text-lg);
+  }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+  .skills p {
+    color: var(--gray-400);
+  }
 
-	.skills .tags {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-		font-size: xx-small;
-	}
+  .skills .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: xx-small;
+  }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+    }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
 </style>

@@ -1,38 +1,41 @@
 ---
-import { iconPaths } from './IconPaths';
-import { Sizes } from '../tokens/core';
+import { iconPaths } from "./IconPaths";
+import { Sizes } from "../tokens/core";
 
 export interface Props {
-	icon?: string;
-	iconPathName?: keyof typeof iconPaths;
-	size?: keyof typeof Sizes;
+  icon?: string;
+  iconPathName?: keyof typeof iconPaths;
+  size?: keyof typeof Sizes;
 }
 
 const { icon, iconPathName, size = "base" } = Astro.props;
 
 const iconPath = iconPathName ? iconPaths[iconPathName] : undefined;
 const iconSize = Sizes[size].textSize;
-
 ---
 
 <>
-{iconPath && <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width="40"
-	height="40"
-	viewBox="0 0 256 256"
-	aria-hidden="true"
-	stroke="black"
->
-	<g set:html={iconPath} />
-</svg>}
-{!iconPath && <span class="material-symbols-outlined">{icon}</span>}
+  {
+    iconPath && (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 256 256"
+        aria-hidden="true"
+        stroke="black"
+      >
+        <g set:html={iconPath} />
+      </svg>
+    )
+  }
+  {!iconPath && <span class="material-symbols-outlined">{icon}</span>}
 </>
 
 <style define:vars={{ iconSize }}>
-	svg {
-		vertical-align: middle;
-		width: var(--iconSize);
-		height: var(--iconSize);
-	}
+  svg {
+    vertical-align: middle;
+    width: var(--iconSize);
+    height: var(--iconSize);
+  }
 </style>
