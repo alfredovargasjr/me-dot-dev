@@ -17,7 +17,7 @@
 	--gray-999: #ffffff;
 
 	--accent-light: #c561f6;
-	--accent-regular: #384cff;
+	--accent-regular: #5d7bd5;
 	--accent-dark: #1c0056;
 	--accent-overlay: hsla(280, 89%, 67%, 0.33);
 	--accent-subtle-overlay: var(--accent-overlay);
@@ -113,6 +113,20 @@
 		0px 7px 7px rgba(255, 255, 255, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.06);
 	--shadow-lg: 0px 62px 25px rgba(255, 255, 255, 0.01), 0px 35px 21px rgba(255, 255, 255, 0.05),
 		0px 16px 16px rgba(255, 255, 255, 0.1), 0px 4px 9px rgba(255, 255, 255, 0.12);
+}
+
+::-webkit-scrollbar {
+	background-color: transparent;
+	width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: darkgray;
+	border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+	background-color: lightgray;
+	border-radius: 999px;
 }
 
 html,

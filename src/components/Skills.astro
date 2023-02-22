@@ -1,22 +1,47 @@
 ---
 import Icon from './Icon.astro';
+import Tag from './Tag.astro';
+
 ---
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Frontend</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+		<Icon icon="code" />
+		<h2>Web</h2>
+		<p>Expertise in developing and collaborating with designers, user researchers, and product to build awesome user experiences.</p>
+		<div class="tags">
+			<Tag tagCategory="language">Javascript</Tag>
+			<Tag tagCategory="library" >React</Tag>
+			<Tag tagCategory="language">Typescript</Tag>
+			<Tag tagCategory="other">Webpack</Tag>
+		</div>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Backend</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+		<Icon icon="database" />
+		<h2>Data</h2>
+		<p>Experience in building scalable and data intensive services to serve data, analytics, and insights.</p>
+		<div class="tags">
+			<Tag tagCategory="other">BigData</Tag>
+			<Tag tagCategory="database">Elasticsearch</Tag>
+			<Tag tagCategory="framework">Hadoop</Tag>
+			<Tag tagCategory="language">Java</Tag>
+			<Tag tagCategory="language">Kotlin</Tag>
+			<Tag tagCategory="database">Postgres</Tag>
+			<Tag tagCategory="database">Redis</Tag>
+			<Tag tagCategory="other">RESTful</Tag>
+			<Tag tagCategory="framework">SpringBoot</Tag>
+		</div>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Developer Experience</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+		<Icon icon="settings" />
+		<h2>DevOps</h2>
+		<p>Knowledge in upgrading the developer experience by configuring pipelines to support continuos integration and delivery (CI/CD).</p>
+		<div class="tags">
+			<Tag tagCategory="other">AWS</Tag>
+			<Tag tagCategory="other">Docker</Tag>
+			<Tag tagCategory="other">Identity and Access Management (IAM)</Tag>
+			<Tag tagCategory="other">Kubernetes</Tag>
+		</div>
 	</div>
 </section>
 
@@ -41,6 +66,13 @@ import Icon from './Icon.astro';
 
 	.skills p {
 		color: var(--gray-400);
+	}
+
+	.skills .tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		font-size: xx-small;
 	}
 
 	@media (min-width: 50em) {
