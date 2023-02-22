@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy:
+  deploy_nonprod:
     runs-on: ubuntu-latest
 
     environment:
@@ -41,7 +41,7 @@ jobs:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
 jobs:
-  deploy:
+  deploy_prod:
     runs-on: ubuntu-latest
 
     environment:
