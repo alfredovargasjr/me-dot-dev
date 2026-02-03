@@ -140,7 +140,7 @@
   border-radius: 999px;
 }
 ::-webkit-scrollbar-track {
-  background-color: lightgray;
+  background-color: transparent;
   border-radius: 999px;
 }
 
