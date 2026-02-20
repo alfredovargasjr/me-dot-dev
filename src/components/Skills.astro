@@ -6,64 +6,85 @@ import Tag from "./Tag.astro";
 <section class="box skills">
   <div class="stack gap-2 lg:gap-4">
     <Icon icon="code" />
-    <h2>Web</h2>
+    <h2>Application Development</h2>
     <p>
-      Expertise in developing and collaborating with designers, user
-      researchers, and product to build awesome user experiences.
+      Shipping user-facing applications by translating ambiguous product
+      requirements into reliable, high-quality experiences.
     </p>
     <div class="tags">
+      <Tag tagCategory="language">Java</Tag>
+      <Tag tagCategory="language">Kotlin</Tag>
+      <Tag tagCategory="framework">Spring Boot</Tag>
       <Tag tagCategory="language">TypeScript</Tag>
       <Tag tagCategory="language">Node</Tag>
       <Tag tagCategory="language">Bun</Tag>
       <Tag tagCategory="library">React</Tag>
       <Tag tagCategory="framework">Next.js</Tag>
       <Tag tagCategory="framework">Express</Tag>
-      <Tag tagCategory="framework">Apollo GraphQL</Tag>
+      <Tag tagCategory="library">Apollo GraphQL</Tag>
+      <Tag tagCategory="other">REST</Tag>
       <Tag tagCategory="other">Vite</Tag>
+      <Tag tagCategory="other">Nx</Tag>
+      <Tag tagCategory="other">Maven</Tag>
+      <Tag tagCategory="other">Gradle</Tag>
+      <Tag tagCategory="other">TestNG</Tag>
       <Tag tagCategory="other">Webpack</Tag>
+      <Tag tagCategory="other">OpenAPI</Tag>
+    </div>
+  </div>
+  <div class="stack gap-2 lg:gap-4">
+    <Icon icon="account_tree" />
+    <h2>Platform & Architecture</h2>
+    <p>
+      Designing scalable backend architecture and event-driven services that
+      support high-throughput, distributed product platforms.
+    </p>
+    <div class="tags">
+      <Tag tagCategory="other">Microservices</Tag>
+      <Tag tagCategory="other">Kafka</Tag>
+      <Tag tagCategory="other">Event-Driven</Tag>
+      <Tag tagCategory="other">Serverless</Tag>
+      <Tag tagCategory="other">Micro-Frontends</Tag>
+      <Tag tagCategory="other">Domain-Driven Design</Tag>
+      <Tag tagCategory="other">Hexagonal Architecture</Tag>
     </div>
   </div>
   <div class="stack gap-2 lg:gap-4">
     <Icon icon="database" />
-    <h2>Data</h2>
+    <h2>Data & Storage</h2>
     <p>
-      Experience in building scalable and data intensive services to serve data,
-      analytics, and insights.
+      Modeling and operating data layers for transactional and search-heavy
+      workloads.
     </p>
     <div class="tags">
-      <Tag tagCategory="language">Java</Tag>
-      <Tag tagCategory="language">Kotlin</Tag>
-      <Tag tagCategory="language">Python</Tag>
       <Tag tagCategory="language">SQL</Tag>
-      <Tag tagCategory="framework">Spring Boot</Tag>
-      <Tag tagCategory="framework">Kafka</Tag>
-      <Tag tagCategory="framework">Event-Driven</Tag>
-      <Tag tagCategory="framework">Serverless</Tag>
+      <Tag tagCategory="language">Python</Tag>
       <Tag tagCategory="database">PostgreSQL</Tag>
       <Tag tagCategory="database">Redis</Tag>
       <Tag tagCategory="database">Elasticsearch</Tag>
       <Tag tagCategory="database">Cosmos DB</Tag>
       <Tag tagCategory="database">Azure Blob Storage</Tag>
-      <Tag tagCategory="other">REST</Tag>
+      <Tag tagCategory="other">Apache Iceberg</Tag>
+      <Tag tagCategory="other">Data Lakehouse</Tag>
+      <Tag tagCategory="other">Data Analytics</Tag>
     </div>
   </div>
   <div class="stack gap-2 lg:gap-4">
     <Icon icon="settings" />
-    <h2>DevOps/Delivery</h2>
+    <h2>Delivery & Operations</h2>
     <p>
-      Knowledge in upgrading the developer experience by configuring pipelines
-      to support continuous integration and delivery (CI/CD).
+      Powering the software development lifecycle reliably through CI/CD, IaC, observability, and release
+      governance.
     </p>
     <div class="tags">
       <Tag tagCategory="other">Docker</Tag>
       <Tag tagCategory="other">Kubernetes</Tag>
-      <Tag tagCategory="other">ArgoCD</Tag>
-      <Tag tagCategory="other">Azure</Tag>
-      <Tag tagCategory="other">Azure DevOps</Tag>
-      <Tag tagCategory="other">Terraform</Tag>
-      <Tag tagCategory="other">Datadog</Tag>
+      <Tag tagCategory="software">ArgoCD</Tag>
+      <Tag tagCategory="software">Azure DevOps</Tag>
+      <Tag tagCategory="language">Terraform</Tag>
+      <Tag tagCategory="software">Datadog</Tag>
       <Tag tagCategory="other">GitOps</Tag>
-      <Tag tagCategory="other">LaunchDarkly</Tag>
+      <Tag tagCategory="software">LaunchDarkly</Tag>
       <Tag tagCategory="other">IAM (SAML, OAuth2, SCIM)</Tag>
       <Tag tagCategory="other">Azure Functions</Tag>
     </div>
@@ -108,12 +129,13 @@ import Tag from "./Tag.astro";
 
     .skills {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5rem;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: 3rem;
     }
 
     .skills h2 {
       font-size: var(--text-2xl);
+      min-height: 78.5px;
     }
   }
 </style>

@@ -14,6 +14,9 @@ export const TagCategory = {
   database: {
     color: "#ff70a6",
   },
+  software: {
+    color: "#cdb4db",
+  },
   other: {
     color: "#ff928b",
   },
@@ -23,7 +26,7 @@ interface Props {
   tagCategory?: keyof typeof TagCategory;
 }
 
-const { tagCategory = "other" } = Astro.props;
+const { tagCategory = "other" }: Props = Astro.props;
 
 const category = TagCategory[tagCategory];
 ---
